@@ -42,9 +42,9 @@ export const Route = createFileRoute("/")({
   }),
 });
 
-const WHATSAPP_URL = "https://wa.me/5544999087777?text=Ol%C3%A1%2C%20gostaria%20de%20conhecer%20a%20TexGenera";
+const WHATSAPP_URL = "https://wa.me/5544999087777";
 const LINKEDIN_URL = "https://www.linkedin.com/company/texgenera/";
-const INSTAGRAM_URL = "https://www.instagram.com/texgenera?igsh=MW1tc3E0YTZ2OWF1MA==";
+const INSTAGRAM_URL = "https://instagram.com/texgenera";
 
 const services = [
   {
