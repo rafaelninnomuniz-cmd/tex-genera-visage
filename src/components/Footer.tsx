@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Linkedin, MessageCircle, Mail } from "lucide-react";
-import logo from "@/assets/texgenera-logo.png";
+import logo from "@/assets/texgenera-logo-transparent.png";
 
 const WHATSAPP_URL = "https://wa.me/5544999087777";
 const LINKEDIN_URL = "https://www.linkedin.com/company/texgenera/";
@@ -22,12 +22,7 @@ export default function Footer() {
       <div className="container mx-auto px-6 py-14 grid gap-10 md:grid-cols-[1.2fr_1fr_1fr]">
         <div>
           <div className="flex items-center gap-3 mb-5">
-            <img
-              src={logo}
-              alt="TexGenera"
-              className="h-12 w-auto rounded-md bg-white/95 p-1 shadow-md"
-            />
-            <span className="font-display text-xl">TexGenera</span>
+            <img src={logo} alt="TexGenera" className="h-12 w-auto" />
           </div>
           <p className="text-sm text-muted-foreground leading-relaxed max-w-sm">
             Deeptech brasileira convertendo resíduos têxteis complexos em grafeno e nanomateriais
@@ -85,9 +80,6 @@ export default function Footer() {
               <Instagram className="h-4 w-4" />
             </a>
           </div>
-          <p className="text-xs text-muted-foreground mt-5 leading-relaxed">
-            WhatsApp: +55 44 99908-7777
-          </p>
         </div>
       </div>
       <div className="border-t border-border/40">
