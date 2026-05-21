@@ -9,8 +9,44 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TecnologiaRouteImport } from './routes/tecnologia'
+import { Route as SobreRouteImport } from './routes/sobre'
+import { Route as ProcessoRouteImport } from './routes/processo'
+import { Route as PesquisaRouteImport } from './routes/pesquisa'
+import { Route as ContatoRouteImport } from './routes/contato'
+import { Route as AplicacoesRouteImport } from './routes/aplicacoes'
 import { Route as IndexRouteImport } from './routes/index'
 
+const TecnologiaRoute = TecnologiaRouteImport.update({
+  id: '/tecnologia',
+  path: '/tecnologia',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SobreRoute = SobreRouteImport.update({
+  id: '/sobre',
+  path: '/sobre',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProcessoRoute = ProcessoRouteImport.update({
+  id: '/processo',
+  path: '/processo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PesquisaRoute = PesquisaRouteImport.update({
+  id: '/pesquisa',
+  path: '/pesquisa',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContatoRoute = ContatoRouteImport.update({
+  id: '/contato',
+  path: '/contato',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AplicacoesRoute = AplicacoesRouteImport.update({
+  id: '/aplicacoes',
+  path: '/aplicacoes',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +55,116 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/aplicacoes': typeof AplicacoesRoute
+  '/contato': typeof ContatoRoute
+  '/pesquisa': typeof PesquisaRoute
+  '/processo': typeof ProcessoRoute
+  '/sobre': typeof SobreRoute
+  '/tecnologia': typeof TecnologiaRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/aplicacoes': typeof AplicacoesRoute
+  '/contato': typeof ContatoRoute
+  '/pesquisa': typeof PesquisaRoute
+  '/processo': typeof ProcessoRoute
+  '/sobre': typeof SobreRoute
+  '/tecnologia': typeof TecnologiaRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/aplicacoes': typeof AplicacoesRoute
+  '/contato': typeof ContatoRoute
+  '/pesquisa': typeof PesquisaRoute
+  '/processo': typeof ProcessoRoute
+  '/sobre': typeof SobreRoute
+  '/tecnologia': typeof TecnologiaRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/aplicacoes'
+    | '/contato'
+    | '/pesquisa'
+    | '/processo'
+    | '/sobre'
+    | '/tecnologia'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/aplicacoes'
+    | '/contato'
+    | '/pesquisa'
+    | '/processo'
+    | '/sobre'
+    | '/tecnologia'
+  id:
+    | '__root__'
+    | '/'
+    | '/aplicacoes'
+    | '/contato'
+    | '/pesquisa'
+    | '/processo'
+    | '/sobre'
+    | '/tecnologia'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AplicacoesRoute: typeof AplicacoesRoute
+  ContatoRoute: typeof ContatoRoute
+  PesquisaRoute: typeof PesquisaRoute
+  ProcessoRoute: typeof ProcessoRoute
+  SobreRoute: typeof SobreRoute
+  TecnologiaRoute: typeof TecnologiaRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/tecnologia': {
+      id: '/tecnologia'
+      path: '/tecnologia'
+      fullPath: '/tecnologia'
+      preLoaderRoute: typeof TecnologiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sobre': {
+      id: '/sobre'
+      path: '/sobre'
+      fullPath: '/sobre'
+      preLoaderRoute: typeof SobreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/processo': {
+      id: '/processo'
+      path: '/processo'
+      fullPath: '/processo'
+      preLoaderRoute: typeof ProcessoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pesquisa': {
+      id: '/pesquisa'
+      path: '/pesquisa'
+      fullPath: '/pesquisa'
+      preLoaderRoute: typeof PesquisaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contato': {
+      id: '/contato'
+      path: '/contato'
+      fullPath: '/contato'
+      preLoaderRoute: typeof ContatoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/aplicacoes': {
+      id: '/aplicacoes'
+      path: '/aplicacoes'
+      fullPath: '/aplicacoes'
+      preLoaderRoute: typeof AplicacoesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +177,12 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AplicacoesRoute: AplicacoesRoute,
+  ContatoRoute: ContatoRoute,
+  PesquisaRoute: PesquisaRoute,
+  ProcessoRoute: ProcessoRoute,
+  SobreRoute: SobreRoute,
+  TecnologiaRoute: TecnologiaRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
