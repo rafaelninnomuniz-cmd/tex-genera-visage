@@ -67,8 +67,8 @@ function ContatoPage() {
       <section className="py-16">
         <div className="container mx-auto px-6 grid lg:grid-cols-[1.1fr_1fr] gap-12">
           <form onSubmit={onSubmit} className="bg-card-gradient border border-border/60 rounded-2xl p-8 md:p-10 space-y-5">
-            <h2 className="font-display text-2xl md:text-3xl mb-2">Envie uma mensagem</h2>
-            <p className="text-sm text-muted-foreground mb-4">Sua mensagem será encaminhada para <strong className="text-foreground">{CONTACT_EMAIL}</strong>.</p>
+            <h2 className="font-display text-2xl md:text-3xl mb-4">Envie uma mensagem</h2>
+
 
             {(["name", "email", "company"] as const).map((f) => (
               <div key={f}>
@@ -117,7 +117,7 @@ function ContatoPage() {
                   <Mail className="h-4 w-4 text-primary" /> {CONTACT_EMAIL}
                 </a>
                 <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
-                  <MessageCircle className="h-4 w-4 text-primary" /> WhatsApp +55 44 99908-7777
+                  <MessageCircle className="h-4 w-4 text-primary" /> WhatsApp
                 </a>
                 <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
                   <Linkedin className="h-4 w-4 text-primary" /> /company/texgenera
@@ -131,7 +131,7 @@ function ContatoPage() {
             <div className="bg-card-gradient border border-primary/30 rounded-2xl p-7">
               <h3 className="font-display text-xl mb-2">Onde estamos</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Hub central de pesquisa, pirólise e validação em <strong className="text-foreground">Londrina — PR</strong>, com filiais regionais de captação em Sul, Sudeste e Nordeste do Brasil.
+                Parceiro institucional <strong className="text-foreground">ISI Eletroquímica</strong> em Curitiba, Hub central em <strong className="text-foreground">Londrina — PR</strong>, e filiais regionais de captação nas regiões Sul, Sudeste e Nordeste do Brasil.
               </p>
             </div>
           </div>

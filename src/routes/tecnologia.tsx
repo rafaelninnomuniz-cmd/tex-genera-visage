@@ -41,7 +41,7 @@ const pillars = [
   {
     icon: Factory,
     title: "Arquitetura Hub & Spoke",
-    desc: "Filiais regionais (Sul, Sudeste, Nordeste) preparam e densificam o resíduo. A planta central em Londrina executa toda a química.",
+    desc: "Filiais regionais (Sul, Sudeste, Nordeste) preparam e densificam o resíduo. A planta central em Londrina executa o processo termoquímico e a produção dos carbonos precursores.",
   },
 ];
 
@@ -52,7 +52,7 @@ function TecnologiaPage() {
         eyebrow="Tecnologia Proprietária"
         title="Pirólise avançada,"
         highlight="química de fronteira."
-        description="A TexGenera combina uma rota patenteada de pirólise controlada com processos físico-químicos laboratoriais para converter resíduos têxteis complexos em carbonos precursores — entre eles, o grafeno, nosso principal produto."
+        description="A TexGenera combina uma rota tecnológica inovadora de pirólise controlada com processos físico-químicos laboratoriais para converter resíduos têxteis complexos em carbonos precursores — entre eles, o grafeno, nosso principal produto."
       />
 
       <section className="py-20">
@@ -91,8 +91,8 @@ function TecnologiaPage() {
                   TexGenera firmou parceria com a{" "}
                   <strong className="text-foreground">Insight Energy</strong>, referência em
                   engenharia, geração renovável e infraestrutura industrial. A parceria garante
-                  capacidade técnica para projetar, dimensionar e construir as plantas pré-piloto e
-                  piloto da TexGenera.
+                  capacidade técnica para projetar, dimensionar e construir as plantas piloto, o
+                  laboratório e a planta industrial da TexGenera.
                 </p>
                 <a
                   href="https://insightenergy.com.br"

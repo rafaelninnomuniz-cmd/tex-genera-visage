@@ -35,12 +35,13 @@ const apps = [
 ];
 
 const marketsData = [
-  { sector: "Compósitos", value: 3.5 },
-  { sector: "Baterias / EV", value: 2.8 },
-  { sector: "Filtragem & água", value: 1.2 },
-  { sector: "Pneus & borrachas", value: 1.1 },
   { sector: "Tintas & revestim.", value: 0.9 },
-  { sector: "Aeroespacial", value: 0.8 },
+  { sector: "Saúde", value: 1.0 },
+  { sector: "Pneus & borrachas", value: 1.1 },
+  { sector: "Filtragem & água", value: 1.2 },
+  { sector: "Aeroespacial", value: 1.8 },
+  { sector: "Baterias / EV", value: 2.8 },
+  { sector: "Compósitos", value: 3.5 },
 ];
 
 function AplicacoesPage() {
