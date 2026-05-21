@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Menu, X, MessageCircle } from "lucide-react";
-import logo from "@/assets/texgenera-logo.png";
+import logo from "@/assets/texgenera-logo-transparent.png";
 
 const WHATSAPP_URL = "https://wa.me/5544999087777";
 
@@ -35,11 +35,8 @@ export default function Header() {
     >
       <div className="container mx-auto px-6 flex items-center justify-between gap-4">
         <Link to="/" className="flex items-center gap-3 shrink-0" onClick={() => setOpen(false)}>
-          <img
-            src={logo}
-            alt="TexGenera"
-            className="h-11 w-auto rounded-md bg-white/95 p-1 shadow-md"
-          />
+          <img src={logo} alt="TexGenera" className="h-11 w-auto" />
+
           <span className="hidden sm:block font-display text-lg tracking-tight">TexGenera</span>
         </Link>
 
